@@ -58,6 +58,7 @@ public class WordUtils {
               return false;
             }
         }
+
         return true;
     }
 
