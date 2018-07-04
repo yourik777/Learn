@@ -63,6 +63,13 @@ public class ReadFile {
                 res2.add(str3);
                 flag = true;
             }
+
+//            for (int i = 0; i < res2.size()-1; ++i) {
+//               if (!)
+//               if(res2.get(i)!=res2.get(i+1)) resResult.add(res2.get(i));
+//            }
+//            res2.clear();
+//            res2 = resResult;
 //            res2 = res;
             for (int i=0; i<res2.size()-1; ++i) {
 //                if (WordUtils.compareWords(res2.get(i),res2.get(i+1)) && (i!=res2.size()-1)) continue;
@@ -84,13 +91,31 @@ public class ReadFile {
                         if (intStr4 == intStr5) {
                             bool = WordUtils.specialCompare(str4, str5);
                             if (bool) {
+                                bool = false;
+                                if (resResult.size() != 0){
+                                    for (int k = 0; k < resResult.size(); k++) {
+                                        if (resResult.get(k).equals(str4)) continue;
+                                        if (resResult.get(k).equals(str5)) continue;
+                                        resResult.add(str4);
+                                        resResult.add(str5);
+                                        bool = true;
 
-                                resResult.add(str4);
-                                resResult.add(str5);
+                                    }
+                                } else {
+                                    resResult.add(str4);
+                                    resResult.add(str5);
+                                }
+
                             }
 
                         }
                         else continue;
+
+                        if (true) {
+
+                        } else {
+
+                        }
 
                         if (bool) {
                             count++;
