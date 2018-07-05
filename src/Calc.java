@@ -14,13 +14,6 @@ public class Calc implements IMultiplication{
 
   public static void main(String arg[]){
 
-//     Calc calc = new Calc();
-//
-//      int h = calc.multiplication(1,5);
-//      System.out.println(h);
-//      if (h==6) System.out.println("ZAEBIS");
-//      else System.out.println("Hueivo");
-
       long now = System.currentTimeMillis();
 
       ReadFile readFile = new ReadFile();

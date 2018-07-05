@@ -64,15 +64,8 @@ public class ReadFile {
                 flag = true;
             }
 
-//            for (int i = 0; i < res2.size()-1; ++i) {
-//               if (!)
-//               if(res2.get(i)!=res2.get(i+1)) resResult.add(res2.get(i));
-//            }
-//            res2.clear();
-//            res2 = resResult;
-//            res2 = res;
+
             for (int i=0; i<res2.size()-1; ++i) {
-//                if (WordUtils.compareWords(res2.get(i),res2.get(i+1)) && (i!=res2.size()-1)) continue;
                 for (int j = i+1; j < res2.size()-1; ++j)
                     if (res2.get(i).length() != res2.get(j).length()) {
                         continue;
@@ -109,12 +102,8 @@ public class ReadFile {
                             }
 
                         }
-                        else continue;
-
-                        if (true) {
-
-                        } else {
-
+                        else {
+                            continue;
                         }
 
                         if (bool) {
@@ -137,7 +126,6 @@ public class ReadFile {
                 System.out.println(resResult.get(j));
             }
 
-//            }
         } catch (IOException e){
 
         }
