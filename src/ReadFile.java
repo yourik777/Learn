@@ -66,57 +66,64 @@ public class ReadFile {
 
 
             for (int i=0; i<res2.size()-1; ++i) {
+                String str4 = "";
+                str4 = WordUtils.Sort(res2.get(i));
                 for (int j = i+1; j < res2.size()-1; ++j)
                     if (res2.get(i).length() != res2.get(j).length()) {
                         continue;
                     } else {
-                        int intStr4 = 0;
-                        int intStr5 = 0;
-                        String str4 = "";
+//                        int intStr4 = 0;
+//                        int intStr5 = 0;
+//                        String str4 = "";
                         String str5 = "";
-                        str4 = res2.get(i);
-                        str5 = res2.get(j);
-                        if (WordUtils.compareWords(str4, str5)) continue;
-                        for (int k = 0; k < str4.length(); ++k) {
-                            intStr4 = intStr4 + str4.charAt(k);
-                            intStr5 = intStr5 + str5.charAt(k);
-                        }
-                        if (intStr4 == intStr5) {
-                            bool = WordUtils.specialCompare(str4, str5);
-                            if (bool) {
-                                bool = false;
-                                if (resResult.size() != 0){
-                                    for (int k = 0; k < resResult.size(); k++) {
-                                        if (resResult.get(k).equals(str4)) continue;
-                                        if (resResult.get(k).equals(str5)) continue;
-                                        resResult.add(str4);
-                                        resResult.add(str5);
-                                        bool = true;
-
-                                    }
-                                } else {
-                                    resResult.add(str4);
-                                    resResult.add(str5);
-                                }
-
-                            }
-
-                        }
-                        else {
-                            continue;
+//                        str4 = WordUtils.Sort(res2.get(i));
+                        str5 = WordUtils.Sort(res2.get(j));
+                        if (str4.equals(str5)){
+                            resResult.add(str4);
                         }
 
-                        if (bool) {
-                            count++;
-                            System.out.println("Sovpadenyi - " + count);
-                            System.out.println();
-                            System.out.println("Word1 = " + str4);
-                            System.out.println("Word2 = " + str5);
-                            System.out.println();
-                            System.out.println("intStr4 = " + intStr4);
-                            System.out.println("intStr5 = " + intStr5);
-                            System.out.println();
-                        }
+
+//                        if (WordUtils.compareWords(str4, str5)) continue;
+//                        for (int k = 0; k < str4.length(); ++k) {
+//                            intStr4 = intStr4 + str4.charAt(k);
+//                            intStr5 = intStr5 + str5.charAt(k);
+//                        }
+//                        if (intStr4 == intStr5) {
+//                            bool = WordUtils.specialCompare(str4, str5);
+//                            if (bool) {
+//                                bool = false;
+//                                if (resResult.size() != 0){
+//                                    for (int k = 0; k < resResult.size(); k++) {
+//                                        if (resResult.get(k).equals(str4)) continue;
+//                                        if (resResult.get(k).equals(str5)) continue;
+//                                        resResult.add(str4);
+//                                        resResult.add(str5);
+//                                        bool = true;
+//
+//                                    }
+//                                } else {
+//                                    resResult.add(str4);
+//                                    resResult.add(str5);
+//                                }
+//
+//                            }
+//
+//                        }
+//                        else {
+//                            continue;
+//                        }
+//
+//                        if (bool) {
+//                            count++;
+//                            System.out.println("Sovpadenyi - " + count);
+//                            System.out.println();
+//                            System.out.println("Word1 = " + str4);
+//                            System.out.println("Word2 = " + str5);
+//                            System.out.println();
+//                            System.out.println("intStr4 = " + intStr4);
+//                            System.out.println("intStr5 = " + intStr5);
+//                            System.out.println();
+//                        }
                     }
 
 

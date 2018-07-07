@@ -43,8 +43,22 @@ public class WordUtils {
                     return true;
                 }
 //            }
-
         }
         return false;
+    }
+
+    public static String Sort(String str) {
+        char str1[];
+        for (int i = str.length()-1; i > 0; i--) {
+            for (int j = 0; j < str.length() - 1; j++){
+                if (str.charAt(j) > str.charAt(j+1)) {
+                    str1[] = str.charAt(j);
+                    str.charAt(j) = str.charAt(j + 1);
+                    str.charAt(j + 1) = str1;
+                }
+            }
+
+        }
+        return str1;
     }
 }
