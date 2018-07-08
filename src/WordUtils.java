@@ -34,7 +34,6 @@ public class WordUtils {
 
     public static boolean compareWords(String str6, String str7) {
         int count1 =0;
-//        if (str6.length() == str7.length()){
             for (int l = 0; l < str6.length(); l++) {
                 if (str6.charAt(l) == str7.charAt(l)) {
                     count1++;
@@ -42,23 +41,26 @@ public class WordUtils {
                 if (str6.length() == count1) {
                     return true;
                 }
-//            }
         }
         return false;
     }
 
     public static String Sort(String str) {
-        char str1[];
-        for (int i = str.length()-1; i > 0; i--) {
-            for (int j = 0; j < str.length() - 1; j++){
-                if (str.charAt(j) > str.charAt(j+1)) {
-                    str1[] = str.charAt(j);
-                    str.charAt(j) = str.charAt(j + 1);
-                    str.charAt(j + 1) = str1;
+        char[] str2 = str.toCharArray();
+        String str3  = "";
+        for (int i =0 ; i < str.length()-1; i++) {
+            for (int j = i+1; j >0; j--){
+                if (str2[j] <str2[j-1]) {
+                    char temp = str2[j-1];
+                    str2[j-1] = str2[j];
+                    str2[j] = temp;
                 }
             }
 
         }
-        return str1;
+        for (int i =0 ; i < str2.length-1; i++) {
+            str3 = str3 + str2[i];
+        }
+        return str3;
     }
 }
